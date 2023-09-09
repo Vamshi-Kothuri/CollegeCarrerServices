@@ -1,0 +1,41 @@
+
+<%- include("partials/header"); -%>
+<%- include("Sidebar"); -%>
+<!--Right Section (Jobs Details)-->
+ <div class="detail">
+    <!--this is x icon on mobile view-->
+    <ion-icon class="close-detail" name="close-outline"></ion-icon>
+    <div class="detail-header">
+        <img src="images/amazon.png">
+        <h2><%=Name%></h2>
+        <p><%=position%></p>
+    </div>
+    <!--Horizontal line-->
+    <hr class="divider">
+
+    <div class="detail-desc">
+        <div class="about">
+            <h4>About Company</h4>
+            <p><%= about %>.</p>
+            <a href="<%= applyHere %>">Read more</a>
+        </div>
+        <!--Horizontal line-->
+        <hr class="divider">
+
+        <div class="qualification">
+            <h4>Qualification</h4>
+            <ul>
+                
+                <li><%=  req %></li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, eligendielit. Exercitationem,.</li>
+            </ul>
+        </div>
+    </div>
+    <hr class="divider">
+    <!--Apply and Save Butttons-->
+    <div class="detail-btn">
+        <button class="btn-apply"><a href="<%= applyHere %>" style="text-decoration:none; color:inherit">Apply Now</a></button>
+        <button class="btn-save">Save Job</button>
+    </div>
+</div>
+<%- include("partials/Fotter"); -%>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="css/AddPost.css">
+    <title>Post a Job</title>
+</head>
+
+<body>
+    <%- include("partials/Header") %>
+    <div class="Sidebar">
+        <%- include("Sidebar") %>
+    </div>
+    
+<div class="wrapper">
+    
+    <h1>Post a Job</h1>
+    <form action="/Update" method="post">
+        <input type="text" placeholder="CompanyName" name="CompanyName" >
+        <input type="text" placeholder="Job Position" name="JobRole">
+        <input type="text" placeholder="Job Location" name="JobLoc">
+        <input type="time" placeholder="current Time" name="CurrTime">
+        <input type="text" placeholder="Job Type(FullTime/PartTime)" name="JobType">
+        <input type="text" placeholder="Enter Number" name="NoOfApps">
+        <input type="text" placeholder="Division" name="Division">
+        <input type="number" placeholder="Salary" name="Salary">
+        <input type="text" placeholder="AboutCompany" name="AboutCompany">
+        <input type="text" placeholder="ApplicationLink" name="ApplicationLink">
+        <textarea type="text" placeholder="Req-Qualifications" name="Qualifications" ></textarea>
+        
+
+        <button type="submit" name="submit" value="<%= reqid %>" >Update Detais</button>
+
+    </form>
+    
+</div> 
+<%- include("partials/Fotter") %>
+
+</body>
+
+</html>

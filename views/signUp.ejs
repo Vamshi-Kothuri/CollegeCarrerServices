@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="css/SignUp.css"/>
+    <title>SignUp Page</title>
+</head>
+<body>
+   <div class="wrapper">
+    <h1>Sign Up</h1>
+    <form action="/Register"  method="post">
+        <input type="text" placeholder="Username" name="Username" required>
+        <input type="text" placeholder="Name" name="Name" required>
+        <input type="text" placeholder="Password" name="Password" required>
+        <!-- <input type="text" placeholder="Re-Enter Password" name="Password" required> -->
+
+   
+    <div class="terms">
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox" >I agree to these<a href="#">Terms and Conditions</a></label>
+    </div>
+        <button type="submit" name="register">Sign Up</button>
+    </form>
+    <div class="member">
+        Already a member? <a href="/login">Login Here</a>
+    </div>
+    
+   </div> 
+</body>
+</html>

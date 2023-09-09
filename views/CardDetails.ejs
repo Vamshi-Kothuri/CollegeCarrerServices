@@ -1,0 +1,67 @@
+<!--Card(DETAILS) Disply in middle Section-->
+<%- include("partials/header"); -%>
+<%- include("Sidebar"); -%>
+<%- include("Search"); -%>
+<%- include("Filter"); -%>
+<%- include("Sort") %>
+
+
+<% newPosts.forEach(function(post){ %>
+ 
+<div class="wrapper">
+    <!--card-1-->
+    <div class="card">
+        <!--Card left part-->
+        <div class="card-left  blue-bg">
+            <img src="images/google.png">
+        </div>
+        <!--Details inside the Card(center part)-->
+        <div class="card-center">
+            
+            <a href="/posts/<%=post._id%>" style="text-decoration:none; color:inherit"><h3><%= post.companyName%></h3></a>
+
+            
+
+            <p class="card-details" style="padding-top:5px"><%= post.jobRole %></p>
+            <p class="card-loc" style="padding-right:5px"><ion-icon name="location-outline" style="padding-right:5px"></ion-icon><%=post.jobLocation %></p>
+            <div class="card-sub" style="padding-top:5px">
+                <p><ion-icon name="today-outline" style="padding-right:5px"></ion-icon><%=post.currentTime  %></p>
+                <p><ion-icon name="hourglass-outline" style="padding-right:5px;"></ion-icon><%=post.jobType %></p>
+                <p><ion-icon name="people-outline" style="padding-right:5px;"></ion-icon><%=post.num%>applications</p>
+            </div>
+        </div>
+        <!--card right part-->
+        <div class="card-right">
+            <div class="card-tag">
+                <h5>Division</h5>
+                <a href="#"><%= post.category %></a>
+            </div>
+            <div class="card-salary">
+                <p><b>$<%=post.sal%>k</b><span>/ year</span></p>
+            </div>
+        </div>
+
+        <!-- Update or Delete JobDetails -->
+
+        <div class="card-end">
+            <form action="/Update" method="get">
+                <button class="btn-update"  type="submit" name="submit" value="<%= post._id %>">Update</button>
+            </form>
+            
+            <form action="/Delete" method="post">
+                <button class="btn-delete" type="submit" name="submit" value="<%= post._id %>">Delete</button>
+            </form>
+        </div>
+
+
+    </div>
+
+     
+</div>
+<% }); %>
+
+</div>
+
+
+<%- include("partials/Fotter"); -%>
+<!--Central Main Div Close-->
